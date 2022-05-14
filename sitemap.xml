@@ -86,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://43.138.103.18/categories/index.html</loc>
-    
-    <lastmod>2020-07-01T09:09:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://43.138.103.18/friends/index.html</loc>
     
     <lastmod>2020-07-01T09:09:44.000Z</lastmod>
@@ -100,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://43.138.103.18/AV/index.html</loc>
+    <loc>https://43.138.103.18/archives/index.html</loc>
     
     <lastmod>2020-07-01T09:09:44.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://43.138.103.18/galleries/index.html</loc>
+    <loc>https://43.138.103.18/categories/index.html</loc>
     
     <lastmod>2020-07-01T09:09:44.000Z</lastmod>
     
@@ -121,6 +114,13 @@
   </url>
   
   <url>
+    <loc>https://43.138.103.18/galleries/index.html</loc>
+    
+    <lastmod>2020-07-01T09:09:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://43.138.103.18/404.html</loc>
     
     <lastmod>2020-07-01T09:09:44.000Z</lastmod>
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://43.138.103.18/archives/index.html</loc>
+    <loc>https://43.138.103.18/AV/index.html</loc>
     
     <lastmod>2020-07-01T09:09:44.000Z</lastmod>
     
