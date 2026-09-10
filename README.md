@@ -1,6 +1,6 @@
 # sayfly的网站
 
-基于 Hexo 8.1.2 和定制 Matery 主题的静态博客，计划通过 GitHub Actions 发布到 **https://euxsayfly.github.io/**。不再依赖腾讯云服务器、SSH 部署或已过期域名。
+基于 Hexo 8.1.2 和定制 Matery 主题的静态博客，通过 GitHub Actions 发布到 **[sayfly的网站](https://euxsayfly.github.io/)**。不再依赖腾讯云服务器、SSH 部署或已过期域名。
 
 ## 当前迁移状态
 
@@ -9,7 +9,7 @@
 - 常用前端库改用随站点发布的本地资源，修复缺图、失效资源引用、代码块及数学公式的渲染兼容问题。
 - 已配置 HTTPS 站点地址、canonical、RSS、sitemap、站内搜索和 GitHub Pages 的 404 页面。
 - 原带密码测试文章仍留在本机，但不参与构建或 Git 提交。旧密码弹窗不等于加密，新增带密码内容会使构建失败。排除规则只影响新版，不会删除已经公开过的旧部署或 Git 历史；若过去曾暴露有效凭据，仍需单独撤销或更换。
-- **仅完成本地配置不等于已经上线**；首次发布仍需 GitHub 登录、推送源码以及在仓库设置中启用 Actions 部署。
+- **2026-09-10 已正式上线**：GitHub 登录、源码上传、Actions 部署及公网访问检查均已完成。新地址启用 HTTPS，旧域名绑定已解除。以后推送到 `main` 会自动更新网站；仅修改本机文件不会改变线上网页。
 
 ## 项目结构
 
@@ -61,7 +61,7 @@ cd C:\Users\SAYFLY\myBlog
 
 `npm test` 运行渲染测试；`npm run check` 检查已有生成结果；`npm run build` 会先测试，再清理、生成并验证所有页面。安装必须使用锁文件，不建议运行 `npm audit fix --force`。
 
-## 首次发布到 GitHub Pages
+## 首次发布到 GitHub Pages（已完成，以下供重新配置参考）
 
 目标仓库：[euxsayfly/euxsayfly.github.io](https://github.com/euxsayfly/euxsayfly.github.io)。
 
