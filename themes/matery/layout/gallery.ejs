@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/gallery.css">
+<%- partial('_partial/post-cover') %>
+<%
+const galleries = (site.data && site.data.galleries) || [];
+const currentGallery = galleries.find(item => String(item.name) === String(page.title));
+const galleryConfig = theme.gallery || {};
+const available = galleryConfig.available && currentGallery;
+const baseUrl = (galleryConfig.baseUrl || '').replace(/\/$/, '');
+const photoUrl = photo => baseUrl + '/' + photo.split('/').map(encodeURIComponent).join('/');
+%>
+<main class="container">
+    <div class="photo-wrapper">
+        <% if (available) { %>
+            <div id="gallery-photos">
+                <% for (const photo of currentGallery.photos || []) { %>
+                <a href="<%= photoUrl(photo) %>" class="photo-item" data-fancybox="images">
+                    <img src="<%= photoUrl(photo) %>" alt="<%= currentGallery.name %> · <%= photo %>" decoding="async">
+                </a>
+                <% } %>
+            </div>
+        <% } else { %>
+            <div class="card gallery-notice">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                <h2>相册原图待恢复</h2>
+                <p>原来的照片暂时无法访问，整理好后会重新开放。</p>
+                <a href="<%- url_for('/galleries/') %>">返回相册目录</a>
+            </div>
+        <% } %>
+    </div>
+</main>
+<% if (available) { %>
+<link rel="stylesheet" href="<%- theme.libs.css.fancybox %>">
+<link rel="stylesheet" href="<%- theme.libs.css.justifiedGallery %>">
+<script src="<%- theme.libs.js.fancybox %>"></script>
+<script src="<%- theme.libs.js.justifiedGallery %>"></script>
+<script>
+$('[data-fancybox="images"]').fancybox();
+$('#gallery-photos').justifiedGallery({margins: 5, rowHeight: 150});
+</script>
+<% } %>

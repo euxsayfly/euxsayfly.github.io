@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/gallery.css">
+<%- partial('_partial/bg-cover') %>
+<%
+const galleries = (site.data && site.data.galleries) || [];
+const galleryConfig = theme.gallery || {};
+const baseUrl = (galleryConfig.baseUrl || '').replace(/\/$/, '');
+%>
+<main class="content">
+    <div class="container">
+        <div class="gallery-wrapper row">
+            <% for (const gallery of galleries) { %>
+            <div class="col s6 m4 l4 xl3 gallery-box">
+                <a href="<%- url_for('/galleries/' + encodeURIComponent(gallery.name) + '/') %>" class="gallery-item" data-aos="zoom-in-up">
+                    <% if (galleryConfig.available) { %>
+                    <div class="gallery-cover-box">
+                        <img class="gallery-cover-img" src="<%= baseUrl + '/' + gallery.cover.split('/').map(encodeURIComponent).join('/') %>" alt="<%= gallery.name %> 相册封面" loading="lazy">
+                    </div>
+                    <% } else { %>
+                    <div class="gallery-cover-box gallery-pending">
+                        <span>原图待恢复</span>
+                    </div>
+                    <% } %>
+                    <p class="gallery-name"><%= gallery.name %></p>
+                </a>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</main>

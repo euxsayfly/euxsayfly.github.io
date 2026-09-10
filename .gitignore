@@ -1,0 +1,20 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+public/
+.deploy*/
+.vscode/
+node_modules/
+.idea/
+.local/
+.env
+.env.*
+!.env.example
+# Keep the legacy password-marked test out of the public source repository.
+source/_posts/test.md
+# Historical, unused copies remain available locally and in the backup.
+themes/hexomatery/
+themes/landscape/
+themes/love/
+gulpfile.js

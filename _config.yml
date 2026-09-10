@@ -1,0 +1,89 @@
+# Site
+title: sayfly的网站
+subtitle: 壹说
+description: NWPU | AEROSPACE SCHOOL | AFDL
+keywords: CBF AEROSPACE
+author: YI WEI
+language: zh-CN
+timezone: Asia/Shanghai
+
+# GitHub user site: publish at the domain root.
+url: https://euxsayfly.github.io
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+include:
+  - .nojekyll
+skip_render:
+  - .nojekyll
+exclude:
+  - _posts/test.md
+ignore:
+  - '**/_posts/test.md'
+
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+
+# Hexo 8 has built-in Prism support.
+syntax_highlighter: prismjs
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: '    '
+marked:
+  gfm: true
+  breaks: true
+  smartypants: true
+  descriptionLists: false
+
+search:
+  path: search.xml
+  field: post
+permalink_pinyin:
+  enable: true
+  separator: '-'
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: false
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+sitemap:
+  path: sitemap.xml
+
+index_generator:
+  path: ''
+  per_page: 12
+  order_by: -date
+default_category: uncategorized
+category_map:
+tag_map:
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+# Avoid using checkout timestamps as article modification dates.
+updated_option: date
+per_page: 12
+pagination_dir: page
+theme: matery
+
+# GitHub Actions publishes public/. No SSH server or deploy key is required.
+deploy: {}

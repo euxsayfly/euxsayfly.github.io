@@ -1,0 +1,45 @@
+{
+  "name": "hexo-site",
+  "version": "1.0.0",
+  "private": true,
+  "hexo": {
+    "version": "8.1.2"
+  },
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "scripts": {
+    "build": "node --test tools/*.test.mjs && hexo clean && hexo generate --bail && node tools/verify-site.mjs",
+    "test": "node --test tools/*.test.mjs",
+    "dev": "hexo server --ip 127.0.0.1",
+    "clean": "hexo clean",
+    "check": "node tools/verify-site.mjs"
+  },
+  "dependencies": {
+    "hexo": "8.1.2",
+    "hexo-generator-archive": "2.0.0",
+    "hexo-generator-category": "2.0.0",
+    "hexo-generator-feed": "4.0.0",
+    "hexo-generator-index": "4.0.0",
+    "hexo-generator-search": "2.4.3",
+    "hexo-generator-sitemap": "3.0.1",
+    "hexo-generator-tag": "2.0.0",
+    "hexo-renderer-ejs": "2.0.0",
+    "hexo-renderer-marked": "7.0.1",
+    "hexo-renderer-stylus": "3.0.1",
+    "hexo-server": "3.0.0",
+    "hexo-util": "4.0.0",
+    "hexo-wordcount": "6.0.1",
+    "transliteration": "2.6.1"
+  },
+  "devDependencies": {
+    "cheerio": "^1.1.2"
+  },
+  "overrides": {
+    "nunjucks": "3.2.4"
+  },
+  "allowScripts": {
+    "hexo-util@3.3.0": true,
+    "hexo-util@4.0.0": true
+  }
+}
