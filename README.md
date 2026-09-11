@@ -1,6 +1,6 @@
-# sayfly的网站
+# 壹说
 
-基于 Hexo 8.1.2 和定制 Matery 主题的静态博客，通过 GitHub Actions 发布到 **[sayfly的网站](https://euxsayfly.github.io/)**。不再依赖腾讯云服务器、SSH 部署或已过期域名。
+基于 Hexo 8.1.2 和定制 Matery 主题的静态博客，通过 GitHub Actions 发布到 **[壹说](https://euxsayfly.github.io/)**。不再依赖腾讯云服务器、SSH 部署或已过期域名。
 
 ## 当前迁移状态
 
